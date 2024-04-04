@@ -18,7 +18,7 @@
  *
  */
 function getCurrentFunctionName() {
-  throw new Error('Not implemented');
+  return getCurrentFunctionName.name;
 }
 
 /**
@@ -33,7 +33,11 @@ function getCurrentFunctionName() {
  *
  */
 function getFunctionBody(/* func */) {
-  throw new Error('Not implemented');
+  // if (typeof func === 'function') {
+  //   const newFunc = func;
+  //   return newFunc.toString();
+  // }
+  // return `${getFunctionBody(func)}`;
 }
 
 /**
@@ -50,8 +54,8 @@ function getFunctionBody(/* func */) {
  *  ]) => [0, 1, 2]
  *
  */
-function getArgumentsCount(/* funcs */) {
-  throw new Error('Not implemented');
+function getArgumentsCount(funcs) {
+  return funcs.map((func) => func.length);
 }
 
 /**
